@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\VisualStudio(Projects)\\Laba_ISTP_2\\Laba_ISTP_2\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\VisualStudio(Projects)\\Laba_ISTP_2\\Laba_ISTP_2\\wwwroot\\js\\Library.js",
+      "PackagePath": "staticwebassets\\js\\Library.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Laba_ISTP_2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Laba_ISTP_2.props",
+      "PackagePath": "build\\Laba_ISTP_2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Laba_ISTP_2.props",
+      "PackagePath": "buildMultiTargeting\\Laba_ISTP_2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Laba_ISTP_2.props",
+      "PackagePath": "buildTransitive\\Laba_ISTP_2.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

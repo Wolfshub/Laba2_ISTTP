@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "minmwzAiXSfVK9UQY/kpY9BGvHulIwZf20hBXJUCyf0=",
+  "Source": "Laba_ISTP_2",
+  "BasePath": "_content/Laba_ISTP_2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Laba_ISTP_2\\wwwroot",
+      "Source": "Laba_ISTP_2",
+      "ContentRoot": "C:\\VisualStudio(Projects)\\Laba_ISTP_2\\Laba_ISTP_2\\wwwroot\\",
+      "BasePath": "_content/Laba_ISTP_2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\VisualStudio(Projects)\\Laba_ISTP_2\\Laba_ISTP_2\\wwwroot\\index.html",
+      "SourceId": "Laba_ISTP_2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\VisualStudio(Projects)\\Laba_ISTP_2\\Laba_ISTP_2\\wwwroot\\",
+      "BasePath": "_content/Laba_ISTP_2",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\VisualStudio(Projects)\\Laba_ISTP_2\\Laba_ISTP_2\\wwwroot\\js\\Library.js",
+      "SourceId": "Laba_ISTP_2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\VisualStudio(Projects)\\Laba_ISTP_2\\Laba_ISTP_2\\wwwroot\\",
+      "BasePath": "_content/Laba_ISTP_2",
+      "RelativePath": "js/Library.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Library.js"
+    }
+  ]
+}

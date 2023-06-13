@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Library System</title>
+    <link rel="stylesheet" href="css/site.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h3 {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="submit"] {
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #337ab7;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        #editForm {
+            display: none;
+            margin-top: 10px;
+        }
+
+            #editForm input[type="text"],
+            #editForm input[type="submit"] {
+                margin-bottom: 5px;
+            }
+
+            #editForm a {
+                color: #333;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 16px;
+                margin-left: 5px;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <h1>Library System</h1>
+
+    <h3>Add Library</h3>
+    <form onsubmit="addLibrary()">
+        <input type="text" id="add-name" placeholder="Library Name" required>
+        <input type="text" id="add-location" placeholder="Library Location" required>
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="editForm">
+        <h3>Edit Library</h3>
+        <form onsubmit="updateLibrary()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name">
+            <input type="text" id="edit-location">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Books</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tbody id="libraries"></tbody>
+    </table>
+
+    <script src="js/library.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            getLibraries();
+        });
+
+        function addBook(event, libraryId) {
+            event.preventDefault();
+            const titleInput = document.getElementById(`book-title-${libraryId}`);
+            const authorInput = document.getElementById(`book-author-${libraryId}`);
+            const genreInput = document.getElementById(`book-genre-${libraryId}`);
+            const yearInput = document.getElementById(`book-year-${libraryId}`);
+
+            const book = {
+                title: titleInput.value.trim(),
+                author: authorInput.value.trim(),
+                genre: genreInput.value.trim(),
+                year: yearInput.value.trim(),
+                libraryId: libraryId
+            };
+
+            fetch(`api/Books?id=${libraryId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(book)
+            })
+                .then(response => response.json())
+                .then(() => {
+                    titleInput.value = '';
+                    authorInput.value = '';
+                    getLibraries();
+                })
+                .catch(error => console.error('Unable to add book.', error));
+        }
+    </script>
+</body>
+</html>
